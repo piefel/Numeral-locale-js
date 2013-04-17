@@ -1,6 +1,6 @@
 // numeral.js language configuration
-// language : portuguese (pt-pt)
-// author : Diogo Resende : https://github.com/dresende
+// language : belgium-dutch (be-nl)
+// author : Dieter Luypaert : https://github.com/moeriki
 (function () {
     var language = {
         delimiters: {
@@ -14,7 +14,7 @@
             trillion: 't'
         },
         ordinal : function (number) {
-            return 'º';
+            return (number === 1 || number >= 20) ? 'ste' : 'de';
         },
         currency: {
             symbol: '€'
@@ -27,6 +27,6 @@
     }
     // Browser
     if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('pt-pt', language);
+        this.numeral.language('nl', language);
     }
 }());

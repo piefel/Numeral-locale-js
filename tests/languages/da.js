@@ -1,6 +1,6 @@
-module('Language: da-dk', {
+module('Language: da', {
     setup: function() {
-        numeral.language('da-dk');
+        numeral.language('da');
     }
 });
 
