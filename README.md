@@ -1,11 +1,11 @@
-Numeral.js
+Numeral-locale.js
 =======================================================
 
 A JavaScript library for formatting and manipulating numbers.
 
 This is a fork of [Numeral.js](http://numeraljs.com/) by Adam Draper. I do not believe in
 _unformatting_ and _automatic currency_, and Adam does not agree on my insistence of using
-[BCP-47](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) format. I will think of a new name shortly.
+[BCP-47](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) format.
 
 
 Changelog
@@ -21,7 +21,7 @@ Acknowlegements
 
 Numeral.js, while less complex, was inspired by and heavily borrowed from [Moment.js](http://momentjs.com)
 
-This Numeral.js is a fork of [Numeral.js](http://numeraljs.com/).
+This Numeral-locale.js is a fork of [Numeral.js](http://numeraljs.com/).
 
 
 License
@@ -30,6 +30,7 @@ License
 Numeral.js is freely distributable under the terms of the MIT license.
 
 Copyright (c) 2012 Adam Draper
+
 Copyright (c) 2013 Michael Piefel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation

@@ -1,8 +1,8 @@
-// numeral.js
-// version : 1.4.8
-// author : Adam Draper
+// numeral-locale.js
+// version : 1.0.0
+// author : Michael Piefel, based on Numeral.js by Adam Draper
 // license : MIT
-// http://adamwdraper.github.com/Numeral-js/
+// https://github.com/piefel/Numeral-locale-js
 
 (function () {
 
@@ -11,7 +11,7 @@
     ************************************/
 
     var numeral,
-        VERSION = '1.4.8',
+        VERSION = '1.0.0',
         // internal storage for language config files
         languages = {},
         currentLanguage = 'en',
@@ -537,11 +537,6 @@
         Exposing Numeral
     ************************************/
 
-    // CommonJS module is defined
-    if (hasModule) {
-        module.exports = numeral;
-    }
-
     /*global ender:false */
     if (typeof ender === 'undefined') {
         // here, `this` means `window` in the browser, or `global` on the server
@@ -550,10 +545,4 @@
         this['numeral'] = numeral;
     }
 
-    /*global define:false */
-    if (typeof define === 'function' && define.amd) {
-        define([], function () {
-            return numeral;
-        });
-    }
 }).call(this);
