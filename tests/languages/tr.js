@@ -57,22 +57,3 @@ test('Format Percentages', 4, function() {
         strictEqual(numeral(tests[i][0]).format(tests[i][1]), tests[i][2], tests[i][1]);
     }
 });
-
-// Unformat ------------------------
-test('Unformat', 9, function() {
-    var tests = [
-        ['10.000,123',10000.123],
-        ['(0,12345)',-.12345],
-        ['(\u20BA1,23milyon)',-1230000],
-        ['10bin',10000],
-        ['-10bin',-10000],
-        ['23üncü',23],
-        ['\u20BA10.000,00',10000],
-        ['-76%',-.76],
-        ['2:23:57',8637]
-    ];
-
-    for (var i = 0; i < tests.length; i++) {
-        strictEqual(numeral().unformat(tests[i][0]), tests[i][1], tests[i][0]);
-    }
-});
