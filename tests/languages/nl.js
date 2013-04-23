@@ -5,7 +5,7 @@ module('Language: nl', {
 });
 
 // Numbers -----------------------
-test('Format Numbers', 18, function() {
+test('Format Numbers', 12, function() {
     var tests = [
         [10000,'0,0.0000','10 000,0000'],
         [10000.23,'0,0','10 000'],
@@ -18,27 +18,7 @@ test('Format Numbers', 18, function() {
         [1230974,'0.0a','1,2m'],
         [1460,'0a','1k'],
         [-104000,'0a','-104k'],
-        [1,'0o','1ste'],
-        [2,'0o','2de'],
-        [19,'0o','19de'],
-        [52,'0o','52ste'],
-        [23,'0o','23ste'],
-        [100,'0o','100ste'],
         [1,'0[.]0','1']
-    ];
-
-    for (var i = 0; i < tests.length; i++) {
-        strictEqual(numeral(tests[i][0]).format(tests[i][1]), tests[i][2], tests[i][1]);
-    }
-});
-
-// Currency -----------------------
-test('Format Currency', 4, function() {
-    var tests = [
-        [1000.234,'$0,0.00','€1 000,23'],
-        [-1000.234,'($0,0)','(€1 000)'],
-        [-1000.234,'$0.00','-€1000,23'],
-        [1230974,'($0.00a)','€1,23m']
     ];
 
     for (var i = 0; i < tests.length; i++) {

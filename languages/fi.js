@@ -2,7 +2,7 @@
 // language : Finnish
 // author : Sami Saada : https://github.com/samitheberber
 (function () {
-    var language = {
+    this.numeral.language('fi', {
         delimiters: {
             thousands: ' ',
             decimal: ','
@@ -12,21 +12,6 @@
             million: 'M',
             billion: 'G',
             trillion: 'T'
-        },
-        ordinal: function (number) {
-            return '.';
-        },
-        currency: {
-            symbol: '€'
         }
-    };
-
-    // Node
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = language;
-    }
-    // Browser
-    if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('fi', language);
-    }
+    });
 }());

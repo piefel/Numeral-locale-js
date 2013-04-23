@@ -2,7 +2,7 @@
 // language : danish denmark (dk)
 // author : Michael Storgaard : https://github.com/mstorgaard
 (function () {
-    var language = {
+    this.numeral.language('da', {
         delimiters: {
             thousands: '.',
             decimal: ','
@@ -12,21 +12,6 @@
             million: 'mio',
             billion: 'mia',
             trillion: 'b'
-        },
-        ordinal: function (number) {
-            return '.';
-        },
-        currency: {
-            symbol: 'DKK'
         }
-    };
-
-    // Node
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = language;
-    }
-    // Browser
-    if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('da', language);
-    }
+    });
 }());

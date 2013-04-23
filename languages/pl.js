@@ -4,7 +4,7 @@
  * author : Dominik Bulaj : https://github.com/dominikbulaj
  */
 (function () {
-    var language = {
+    this.numeral.language('pl', {
         delimiters: {
             thousands: ' ',
             decimal: ','
@@ -14,21 +14,6 @@
             million: 'mln',
             billion: 'mld',
             trillion: 'bln'
-        },
-        ordinal: function (number) {
-            return '.';
-        },
-        currency: {
-            symbol: 'PLN'
         }
-    };
-
-    // Node
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = language;
-    }
-    // Browser
-    if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('pl', language);
-    }
+    });
 }());

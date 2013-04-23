@@ -2,7 +2,7 @@
 // language : portuguese brazil (pt-br)
 // author : Ramiro Varandas Jr : https://github.com/ramirovjr
 (function () {
-    var language = {
+    this.numeral.language('pt-BR', {
         delimiters: {
             thousands: '.',
             decimal: ','
@@ -12,21 +12,6 @@
             million: 'milhões',
             billion: 'b',
             trillion: 't'
-        },
-        ordinal: function (number) {
-            return 'º';
-        },
-        currency: {
-            symbol: 'R$'
         }
-    };
-
-    // Node
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = language;
-    }
-    // Browser
-    if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('pt-BR', language);
-    }
+    });
 }());

@@ -2,7 +2,7 @@
 // language : German (de) – generally useful in Germany, Austria, Luxembourg, Belgium
 // author : Marco Krage : https://github.com/sinky
 (function () {
-    var language = {
+    this.numeral.language('de', {
         delimiters: {
             thousands: ' ',
             decimal: ','
@@ -12,21 +12,6 @@
             million: 'm',
             billion: 'b',
             trillion: 't'
-        },
-        ordinal: function (number) {
-            return '.';
-        },
-        currency: {
-            symbol: '€'
         }
-    };
-
-    // Node
-    if (typeof module !== 'undefined' && module.exports) {
-        module.exports = language;
-    }
-    // Browser
-    if (typeof window !== 'undefined' && this.numeral && this.numeral.language) {
-        this.numeral.language('de', language);
-    }
+    });
 }());

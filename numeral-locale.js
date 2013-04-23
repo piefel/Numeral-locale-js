@@ -60,9 +60,7 @@
         var output;
 
         // figure out what kind of format we are dealing with
-        if (format.indexOf('$') > -1) { // currency!!!!!
-            output = formatCurrency(n, format);
-        } else if (format.indexOf('%') > -1) { // percentage
+        if (format.indexOf('%') > -1) { // percentage
             output = formatPercentage(n, format);
         } else if (format.indexOf(':') > -1) { // time
             output = formatTime(n, format);
@@ -71,48 +69,6 @@
         }
 
         // return string
-        return output;
-    }
-
-    function formatCurrency (n, format) {
-        var prependSymbol = (format.indexOf('$') <= 1) ? true : false;
-
-        // remove $ for the moment
-        var space = '';
-
-        // check for space before or after currency
-        if (format.indexOf(' $') > -1) {
-            space = ' ';
-            format = format.replace(' $', '');
-        } else if (format.indexOf('$ ') > -1) {
-            space = ' ';
-            format = format.replace('$ ', '');
-        } else {
-            format = format.replace('$', '');
-        }
-
-        // format the number
-        var output = formatNumeral(n, format);
-
-        // position the symbol
-        if (prependSymbol) {
-            if (output.indexOf('(') > -1 || output.indexOf('-') > -1) {
-                output = output.split('');
-                output.splice(1, 0, languages[currentLanguage].currency.symbol + space);
-                output = output.join('');
-            } else {
-                output = languages[currentLanguage].currency.symbol + space + output;
-            }
-        } else {
-            if (output.indexOf(')') > -1) {
-                output = output.split('');
-                output.splice(-1, 0, space + languages[currentLanguage].currency.symbol);
-                output = output.join('');
-            } else {
-                output = output + space + languages[currentLanguage].currency.symbol;
-            }
-        }
-
         return output;
     }
 
@@ -218,19 +174,6 @@
                         break;
                     }
                 }
-            }
-
-            // see if ordinal is wanted
-            if (format.indexOf('o') > -1) {
-                // check for space before
-                if (format.indexOf(' o') > -1) {
-                    ord = ' ';
-                    format = format.replace(' o', '');
-                } else {
-                    format = format.replace('o', '');
-                }
-
-                ord = ord + languages[currentLanguage].ordinal(n._n);
             }
 
             if (format.indexOf('[.]') > -1) {
@@ -378,16 +321,6 @@
             million: 'm',
             billion: 'b',
             trillion: 't'
-        },
-        ordinal: function (number) {
-            var b = number % 10;
-            return (~~ (number % 100 / 10) === 1) ? 'th' :
-                (b === 1) ? 'st' :
-                (b === 2) ? 'nd' :
-                (b === 3) ? 'rd' : 'th';
-        },
-        currency: {
-            symbol: '$'
         }
     });
 
