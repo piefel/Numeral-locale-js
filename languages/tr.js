@@ -5,7 +5,7 @@
 //          Burak Yiğit Kaya: https://github.com/BYK
 
 (function () {
-    this.numeral.language('tr', {
+    this.numeral.locale('tr', {
         delimiters: {
             thousands: '.',
             decimal: ','

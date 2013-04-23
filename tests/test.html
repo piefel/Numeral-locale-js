@@ -46,7 +46,7 @@
 
         module('Format', {
             setup: function() {
-                numeral.language('en');
+                numeral.locale('en');
             }
         });
 
@@ -298,17 +298,6 @@
 
         // locale -----------------------
         module('Configuring');
-        test('language', 4, function() {
-            equal(numeral.language(), 'en', 'Default is en');
-            numeral.language('it');
-            equal(numeral.language(), 'it', 'Changed to it');
-            throws(function() {
-                numeral.language('english');
-            }, "unknown language causes exception");
-            numeral.language('english', {});
-            numeral.language('english');
-            equal(numeral.language(), 'english', 'Newly defined language');
-        });
         test('locale', 7, function() {
             numeral.locale('cs');
             equal(numeral.locale(), 'cs', 'Changed to cs');

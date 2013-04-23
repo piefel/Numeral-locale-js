@@ -2,7 +2,7 @@
 // language : portuguese brazil (pt-br)
 // author : Ramiro Varandas Jr : https://github.com/ramirovjr
 (function () {
-    this.numeral.language('pt-BR', {
+    this.numeral.locale('pt-BR', {
         delimiters: {
             thousands: '.',
             decimal: ','

@@ -2,7 +2,7 @@
 // language : portuguese (pt-pt)
 // author : Diogo Resende : https://github.com/dresende
 (function () {
-    this.numeral.language('pt', {
+    this.numeral.locale('pt', {
         delimiters: {
             thousands: ' ',
             decimal: ','

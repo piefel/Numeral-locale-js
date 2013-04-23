@@ -2,7 +2,7 @@
 // language : japanese
 // author : teppeis : https://github.com/teppeis
 (function () {
-    this.numeral.language('ja', {
+    this.numeral.locale('ja', {
         delimiters: {
             thousands: ',',
             decimal: '.'

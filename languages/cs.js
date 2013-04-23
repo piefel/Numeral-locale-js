@@ -2,7 +2,7 @@
 // language : czech (cs)
 // author : Anatoli Papirovski : https://github.com/apapirovski
 (function () {
-    this.numeral.language('cs', {
+    this.numeral.locale('cs', {
         delimiters: {
             thousands: ' ',
             decimal: ','

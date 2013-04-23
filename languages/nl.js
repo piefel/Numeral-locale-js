@@ -2,7 +2,7 @@
 // language : belgium-dutch (be-nl)
 // author : Dieter Luypaert : https://github.com/moeriki
 (function () {
-    this.numeral.language('nl', {
+    this.numeral.locale('nl', {
         delimiters: {
             thousands: ' ',
             decimal: ','

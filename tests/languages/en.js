@@ -1,6 +1,6 @@
 module('Language: en', {
     setup: function() {
-        numeral.language('en');
+        numeral.locale('en');
     }
 });
 

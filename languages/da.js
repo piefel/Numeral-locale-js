@@ -2,7 +2,7 @@
 // language : danish denmark (dk)
 // author : Michael Storgaard : https://github.com/mstorgaard
 (function () {
-    this.numeral.language('da', {
+    this.numeral.locale('da', {
         delimiters: {
             thousands: '.',
             decimal: ','

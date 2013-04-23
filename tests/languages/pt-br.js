@@ -1,6 +1,6 @@
 module('Language: pt-BR', {
     setup: function() {
-        numeral.language('pt-BR');
+        numeral.locale('pt-BR');
     }
 });
 

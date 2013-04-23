@@ -2,7 +2,7 @@
 // language : french (fr-ch)
 // author : Adam Draper : https://github.com/adamwdraper
 (function () {
-    this.numeral.language('fr-CH', {
+    this.numeral.locale('fr-CH', {
         delimiters: {
             thousands: '\'',
             decimal: '.'

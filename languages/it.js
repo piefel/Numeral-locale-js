@@ -2,7 +2,7 @@
 // language : italian Italy (it)
 // author : Giacomo Trombi : http://cinquepunti.it
 (function () {
-    this.numeral.language('it', {
+    this.numeral.locale('it', {
         delimiters: {
             thousands: '.',
             decimal: ','

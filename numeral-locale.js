@@ -251,28 +251,6 @@
         return obj instanceof Numeral;
     };
 
-    // This function will load languages and then set the global language.  If
-    // no arguments are passed in, it will simply return the current global
-    // language key.
-    numeral.language = function (key, values) {
-        if (!key) {
-            return currentLanguage;
-        }
-
-        if (key && !values) {
-            if(!languages[key]) {
-                throw new Error('Unknown language : ' + key);
-            }
-            currentLanguage = key;
-        }
-
-        if (values || !languages[key]) {
-            loadLanguage(key, values);
-        }
-
-        return numeral;
-    };
-
     // This function will load locales and then set the global locale.  If
     // no arguments are passed in, it will simply return the current global
     // language key. This functions differs from 'language' in that it requires
@@ -311,7 +289,7 @@
         return numeral;
     };
 
-    numeral.language('en', {
+    numeral.locale('en', {
         delimiters: {
             thousands: ',',
             decimal: '.'

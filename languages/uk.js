@@ -2,7 +2,7 @@
 // language : Ukrainian (uk)
 // author : Michael Piefel : https://github.com/piefel (with help from Tetyana Kuzmenko)
 (function () {
-    this.numeral.language('uk', {
+    this.numeral.locale('uk', {
         delimiters: {
             thousands: ' ',
             decimal: ','

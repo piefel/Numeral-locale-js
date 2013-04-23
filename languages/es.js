@@ -2,7 +2,7 @@
 // language : spanish
 // author : Hernan Garcia : https://github.com/hgarcia
 (function () {
-    this.numeral.language('es', {
+    this.numeral.locale('es', {
         delimiters: {
             thousands: '.',
             decimal: ','

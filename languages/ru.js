@@ -2,7 +2,7 @@
 // language : russian (ru)
 // author : Anatoli Papirovski : https://github.com/apapirovski
 (function () {
-    this.numeral.language('ru', {
+    this.numeral.locale('ru', {
         delimiters: {
             thousands: ' ',
             decimal: ','

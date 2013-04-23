@@ -1,6 +1,6 @@
 module('Language: tr', {
     setup: function() {
-        numeral.language('tr');
+        numeral.locale('tr');
     }
 });
 

@@ -1,6 +1,6 @@
 module('Language: ru', {
     setup: function() {
-        numeral.language('ru');
+        numeral.locale('ru');
     }
 });
 
