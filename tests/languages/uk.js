@@ -1,11 +1,11 @@
-﻿module('Language: de-CH', {
+module('Language: uk', {
     setup: function() {
-        numeral.language('de-CH');
+        numeral.language('uk');
     }
 });
 
 // Numbers -----------------------
-test('Format Numbers', 12, function() {    
+test('Format Numbers', 12, function() {
     var tests = [
         [10000,'0,0.0000','10 000,0000'],
         [10000.23,'0,0','10 000'],
@@ -15,9 +15,9 @@ test('Format Numbers', 12, function() {
         [-.23,'.00','-,23'],
         [-.23,'(.00)','(,23)'],
         [.23,'0.00000','0,23000'],
-        [1230974,'0.0a','1,2m'],
-        [1460,'0a','1k'],
-        [-104000,'0a','-104k'],
+        [1230974,'0.0a','1,2млн'],
+        [1460,'0a','1тис.'],
+        [-104000,'0a','-104тис.'],
         [1,'0[.]0','1']
     ];
 

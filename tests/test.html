@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Numeral-locale-js unit tests</title>
     <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.10.0.css">
     <style type="text/css">
         .content {
@@ -24,15 +24,12 @@
     <script src="../languages/nl.js"></script>
     <script src="../languages/cs.js"></script>
     <script src="../languages/de.js"></script>
-    <script src="../languages/de-CH.js"></script>
-    <script src="../languages/en-GB.js"></script>
     <script src="../languages/fi.js"></script>
     <script src="../languages/fr.js"></script>
     <script src="../languages/fr-CH.js"></script>
     <script src="../languages/es.js"></script>
     <script src="../languages/pt.js"></script>
-    <script src="../languages/uk-UA.js"></script>
-    <script src="../languages/ru-UA.js"></script>
+    <script src="../languages/uk.js"></script>
     <script src="../languages/ru.js"></script>
     <script src="../languages/it.js"></script>
     <script src="../languages/pt-BR.js"></script>
@@ -322,8 +319,8 @@
                 numeral.locale('de_DE');
             }, "wrong format causes exception");
             
-            numeral.locale('de-CH');
-            equal(numeral.locale(), 'de-CH', 'Changed to de-CH');
+            numeral.locale('pt-BR');
+            equal(numeral.locale(), 'pt-BR', 'Changed to pt-BR');
             numeral.locale('de-DE');
             equal(numeral.locale(), 'de', 'Fall back to de');
             numeral.locale('hm');
@@ -338,7 +335,6 @@
     <!-- include language tests here -->
     <script type="text/javascript" src="languages/nl.js"></script>
     <script type="text/javascript" src="languages/en.js"></script>
-    <script type="text/javascript" src="languages/en-GB.js"></script>
     <script type="text/javascript" src="languages/fi.js"></script>
     <script type="text/javascript" src="languages/fr.js"></script>
     <script type="text/javascript" src="languages/fr-CH.js"></script>
@@ -346,11 +342,9 @@
     <script type="text/javascript" src="languages/pt.js"></script>
     <script type="text/javascript" src="languages/pt-BR.js"></script>
     <script type="text/javascript" src="languages/cs.js"></script>
-    <script type="text/javascript" src="languages/uk-UA.js"></script>
-    <script type="text/javascript" src="languages/ru-UA.js"></script>
+    <script type="text/javascript" src="languages/uk.js"></script>
     <script type="text/javascript" src="languages/ru.js"></script>
     <script type="text/javascript" src="languages/de.js"></script>
-    <script type="text/javascript" src="languages/de-CH.js"></script>
     <script type="text/javascript" src="languages/it.js"></script>
     <script type="text/javascript" src="languages/tr.js"></script>
     <script type="text/javascript" src="languages/da.js"></script>
@@ -359,7 +353,7 @@
 </head>
 <body>
     <div class="content">
-        <div id="qunit"></div>
+        <div id="qunit"><!-- placeholder --></div>
     </div>
 </body>
 </html>
