@@ -15,9 +15,7 @@
         // internal storage for language config files
         languages = {},
         currentLanguage = 'en',
-        zeroFormat = null,
-        // check for nodeJS
-        hasModule = (typeof module !== 'undefined' && module.exports);
+        zeroFormat = null;
 
 
     /************************************
@@ -106,7 +104,6 @@
             optDec = false,
             abbr = '',
             bytes = '',
-            ord = '',
             abs = Math.abs(n._n);
 
         // check if number is zero and a custom zero format has been set
@@ -225,7 +222,7 @@
                 w = '';
             }
 
-            return ((negP && neg) ? '(' : '') + ((!negP && neg) ? '-' : '') + w + d + ((ord) ? ord : '') + ((abbr) ? abbr : '') + ((bytes) ? bytes : '') + ((negP && neg) ? ')' : '');
+            return ((negP && neg) ? '(' : '') + ((!negP && neg) ? '-' : '') + w + d + ((abbr) ? abbr : '') + ((bytes) ? bytes : '') + ((negP && neg) ? ')' : '');
         }
     }
 

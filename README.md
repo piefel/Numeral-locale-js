@@ -14,7 +14,7 @@ Changelog
 ### 1.0.0
 
 Initial release as a fork of the 1.4.8 version. Added _locale_ handling which replaces
-_language_. Use BCP-47 for locale files. Removed unformatting and currency.
+_language_. Use BCP-47 for locale files. Removed unformatting, ordinals and currency.
 
 Acknowlegements
 ===============
